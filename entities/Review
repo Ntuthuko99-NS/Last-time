@@ -1,0 +1,40 @@
+{
+  "name": "Review",
+  "type": "object",
+  "properties": {
+    "target_id": {
+      "type": "string",
+      "description": "ID of the product or service being reviewed"
+    },
+    "target_type": {
+      "type": "string",
+      "enum": [
+        "product",
+        "service"
+      ],
+      "description": "Whether reviewing a product or service"
+    },
+    "target_owner_email": {
+      "type": "string",
+      "description": "Email of the seller/provider"
+    },
+    "rating": {
+      "type": "number",
+      "description": "Rating 1-5"
+    },
+    "comment": {
+      "type": "string"
+    },
+    "reviewer_name": {
+      "type": "string"
+    },
+    "reviewer_email": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "target_id",
+    "target_type",
+    "rating"
+  ]
+}
