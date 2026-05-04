@@ -1,0 +1,115 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Product name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Product description"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price in ZAR"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "electronics",
+        "furniture",
+        "clothing",
+        "books",
+        "vehicles",
+        "home_garden",
+        "sports",
+        "toys",
+        "other"
+      ],
+      "description": "Product category"
+    },
+    "condition": {
+      "type": "string",
+      "enum": [
+        "new",
+        "like_new",
+        "good",
+        "fair",
+        "poor"
+      ],
+      "default": "good"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Image URLs"
+    },
+    "province": {
+      "type": "string",
+      "enum": [
+        "gauteng",
+        "western_cape",
+        "kwazulu_natal",
+        "eastern_cape",
+        "free_state",
+        "limpopo",
+        "mpumalanga",
+        "north_west",
+        "northern_cape"
+      ],
+      "description": "Province"
+    },
+    "city": {
+      "type": "string",
+      "description": "City or township"
+    },
+    "delivery_options": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "pickup",
+          "local_delivery",
+          "courier"
+        ]
+      }
+    },
+    "payment_methods": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "cash",
+          "eft",
+          "payfast",
+          "ozow",
+          "snapscan"
+        ]
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "sold",
+        "reserved",
+        "inactive"
+      ],
+      "default": "active"
+    },
+    "seller_name": {
+      "type": "string"
+    },
+    "seller_email": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "price",
+    "category"
+  ]
+}
